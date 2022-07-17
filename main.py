@@ -3,8 +3,11 @@ import time
 import sys
 import subprocess
 import os
-print("Champion picker. . .")
+import pyfiglet
 
+ascii_banner = pyfiglet.figlet_format("Champion Picker")
+print(ascii_banner)
+print("")
 question = input("do you want to input new champs?(n/y)")
 if question == ("y"):
     champions = input("champs: ").split()
@@ -28,4 +31,5 @@ else:
     subprocess.call([sys.executable, os.path.realpath(__file__)] +
                     sys.argv[1:])
 time.sleep(30)
+
 
